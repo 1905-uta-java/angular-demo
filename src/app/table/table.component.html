@@ -1,0 +1,31 @@
+<h2>(4) Table Component</h2>
+
+<button id='tableswap' (click)='swapTables()'>Swap Tables</button>
+
+<table *ngIf='bootstrapHide'>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Birthday</th>
+  </tr>
+  <tr *ngFor="let row of dataset">
+    <td>{{row.first | capitals}} {{row.last| capitals}}</td>
+    <td>{{row.email}}</td>
+    <td>{{row.birth | date}}</td>
+  </tr>
+</table>
+
+<table *ngIf='!bootstrapHide' class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Birthday</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let row of dataset" scope="row">
+      <td>{{row.first| capitals}} {{row.last| capitals}}</td>
+      <td>{{row.email}}</td>
+      <td>{{row.birth | date}}</td>
+    </tr>
+  </table>

@@ -1,0 +1,23 @@
+<h2>(5) User Component</h2>
+<button id='button-userget' (click)='getUserDataset()'>Get Users</button>
+
+<table *ngIf='userData != null'>
+  <thead>
+    <tr>
+      <td>id</td>
+      <td>name</td>
+      <td>username</td>
+      <td>email</td>
+      <td>phone</td>
+      <td>website</td>
+    </tr>
+  </thead>
+  <tr *ngFor='let user of userData'>
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.username}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.phone}}</td>
+    <td>{{user.website}}</td>
+  </tr>
+</table>

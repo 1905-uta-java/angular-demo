@@ -1,0 +1,6 @@
+<h2>(2) Profile Component</h2>
+<button id="show-profile" (click)="clk()">{{showcontent}}</button>
+<div *ngIf="!isHidden">
+<p>username: {{user.username}}</p>
+<p>email: {{user.email}}</p>
+</div>

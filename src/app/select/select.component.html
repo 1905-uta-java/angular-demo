@@ -1,0 +1,21 @@
+<h2>(3) Select Component</h2>
+<form action="">
+  <input type="radio" name="select" value="Animals" (click)="changes(1)">Animals <br>
+  <input type="radio" name="select" value="Colors" (click)="changes(2)">Colors <br>
+  <input type="radio" name="select" value="Days" (click)="changes(3)">Days <br>
+  <div *ngIf="!hideAnimals">
+    <ul>
+      <li *ngFor="let animal of animals">{{animal}}</li>
+    </ul>
+  </div>
+  <div *ngIf="!hideColors">
+    <ul>
+      <li *ngFor="let color of colors">{{color}}</li>
+    </ul>
+  </div>
+  <div *ngIf="!hideDays">
+    <ul>
+      <li *ngFor="let day of days">{{day}}</li>
+    </ul>
+  </div>
+</form>
